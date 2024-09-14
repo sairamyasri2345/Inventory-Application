@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* @import './assets/css/bootstrap-icons.css';
+
+@import './assets/css/animate.min.css'; */
+:root {
+    /* Global Colors */
+    --Atmos-White: #ffffff;
+    --Atmos-black: #000000;
+
+    /* Primary UI Colors */
+    /* --Atmos-Purple: #140523; */
+    --Atmos-Purple: #32424F;
+    /* --Atmos-Orange: #FF9054; */
+    --Atmos-Orange: #50A9D1;
+/*
+    Secondary UI Colors */
+    --Atmos-Secondary-Lavendar: #D1C4E9;
+    --Atmos-Secondary-Orange: #FFD6C0;
+
+    /* Status Colors */
+     /* --Atmos-Status-Red: #FD726A; */
+     /* --Atmos-Status-Yellow: #FFCA61; */
+     /* --Atmos-Status-Green: #44CB7F; */
+    /* --Atmos-Status-Cyan: #37CFD1; */
+    /* --Atmos-Status-Blue: #739AF5; */
+     /* --Atmos-Status-Warning: #F0B99B; */
+    --Atmos-Status-Red: #FD726A;
+    --Atmos-Status-Yellow: #FFCA61;
+    --Atmos-Status-Green: #44CB7F;
+    --Atmos-Status-Cyan: #37CFD1;
+    --Atmos-Status-Blue: #739AF5;
+    --Atmos-Status-Warning: #F0B99B;
+
+    /* Alert Bar Colors - Transparent Colors */
+    /* --Atmos-Alert-Red: #FAD9D7; */
+    /* --Atmos-Alert-Yellow: #FFEFCE; */
+    /* --Atmos-Alert-Green: #A7F2C8;
+     --Atmos-Alert-Cyan: #9CF1F2;
+     --Atmos-Alert-Blue: #E6EDFE; */
+
+    --Atmos-Alert-Red: #FDF5F5;
+    --Atmos-Alert-Yellow: #FFF7E6;
+    --Atmos-Alert-Green: #E9FBF1;
+    --Atmos-Alert-Cyan: #E1FBFB;
+    --Atmos-Alert-Blue: #F2F6FE;
+    --Atmos-Alert-Orange: #FFF3EC;
+
+    /* Gray Colors */
+    --Atmos-Gray-1: #333333;
+    --Atmos-Gray-2: #4D4D4D;
+    --Atmos-Gray-3: #595F69;
+    --Atmos-Gray-4: #818386;
+    --Atmos-Gray-5: #E1E3E5;
+    --Atmos-Gray-6: #F2F5FA;
+    --Atmos-Gray-7: #E3E6EB;
+    --Atmos-Gray-8: #D2D4D9;
+    --Atmos-Gray-9: #B6BCC6;
+    --Atmos-Gray-10: #C9CFDA;
+
+    --Atmos-Gray-12: #5C5C5C;
+    --Atmos-Gray-13: #858585;
+
+     /* white */
+    --Atmos-white-1: #FFFFFF;
+    --Atmos-white-2: #FBFBFB;
+    --Atmos-white-3: #F5F5F5;
+    --Atmos-white-4: #E0E0E0;
+    --Atmos-body-1: #FBFBFB;
+    --Atmos-body-2: #F8F8F8;
+/*
+    External SCSS */
+    --Atmos-transparent: transparent;
+    --Atmos-box-shadow-1: rgba(34, 41, 47, 0.1);
+    --Atmos-box-shadow-2: #00000029;
+    --Atmos-box-shadow-3: #B8B8B8;
+    --Atmos-box-shadow-4: #50A9D163;
+
+    --Atmos-mask: rgba(0, 0, 0, 0.5);
+    /* --Atmos-bg-color: #f4f7fc; */
+    --Atmos-bg-color: #FBFBFB;
+/*
+    Font Family */
+    --body-font-family: 'Be Vietnam Pro', sans-serif;
+
+    /* Atmos Gradient Colors */
+    --Atmos-Gradient-1: #62586C;
+    --Atmos-Gradient-2: #80482A;
+    --Atmos-Gradient-3: #226640;
+    --Atmos-Gradient-4: #7F3935;
+    --Atmos-Gradient-5: #80482A;
+    --Atmos-Gradient-6: #3A4D7B;
+    --Atmos-Gradient-7: #767676;
+
+    /* Disabled Colors */
+    --Atmos-Disabled-Purple: #898190;
+    --Atmos-Disabled-Orange: #FFC7A9;
+    --Atmos-Disabled-Red: #FEB7B3;
+    --Atmos-Disabled-Yellow: #FFE4AF;
+     --Atmos-Disabled-Green: #A1E5BE;
+    --Atmos-Disabled-Warning: #F7DCCD;
+     --Atmos-Disabled-Cyan: #9AE7E8;
+    --Atmos-Disabled-Blue: #B8CCFA;
+    --Atmos-Disabled-Dark: #989898;
+    --Atmos-Disabled-Purple: #A7D9EF;
+    --Atmos-Disabled-Orange: #8EA7BB;
+    --Atmos-Disabled-Red: #FEB7B3;
+    --Atmos-Disabled-Yellow: #FFE4AF;
+    --Atmos-Disabled-Green: #A1E5BE;
+    --Atmos-Disabled-Warning: #F7DCCD;
+    --Atmos-Disabled-Cyan: #9AE7E8;
+    --Atmos-Disabled-Blue: #B8CCFA;
+    --Atmos-Disabled-Dark: #989898;
+    --font-size: 14px;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+
+
+/* To use in some component for oversize heading */
+.Typography_Heading_H1 {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    font-weight: 500;
+}
+
+/* // To use in some component for Large heading */
+.Typography_Heading_H2 {
+    font-size: 2.188rem;
+    line-height: 2.875rem;
+}
+
+/* // To use in some component for Large screen title */
+.Typography_Heading_H3 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+}
+
+/* // To use in breadcrumb main title for heading */
+.Typography_Heading_H4 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-weight: 400;
+}
+/*
+// To use in card title as a sub heading */
+.Typography_Heading_H5 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    font-weight: 400;
+}
+
+/* To use in some components as needed */
+.Typography_Heading_H6 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+}
+
+/* To use in card all paragraphs, body and card text's */
+.Typography_Body_Font {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+}
+
+/* To use in card all paragraphs, body and card text's */
+.Typography_Body_Small_font {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+}
+
+/* To use in card all paragraphs, body and card text's */
+.Typography_Extra_Body_Small_font {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+}
+
+/* very rare case example: time in charts 10 mins ago */
+.Typography_Double_Extra_Body_Small_font {
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font-family);
+    background: var(--Atmos-bg-color);
+    font-size: var(--font-size) !important;
+    line-height: 1rem;
+}
+.background-white {
+    background-color: var(--Atmos-White);
+  }
+
+  .background-primary {
+    background-color: var(--Atmos-Purple);
+  }
+
+  .background-secondary {
+    background-color: var(--Atmos-Orange);
+  }
+
+  .background-success {
+    background-color: var(--Atmos-Status-Green);
+  }
+
+  .background-danger {
+    background-color: var(--Atmos-Status-Red);
+  }
+
+  .background-info {
+    background-color: var(--Atmos-Status-Blue);
+  }
+
+  .background-warning {
+    background-color: var(--Atmos-Secondary-Orange);
+  }
+
+  .background-dark {
+    background-color: var(--Atmos-Purple);
+  }
+
+  .background-cyan {
+    background-color: var(--Atmos-Status-Cyan);
+  }
+
+  .btn-gray {
+    background-color: var(--Atmos-Gray-1);
+  }
+
+  .background-gray-11 {
+    background-color: var(--Atmos-Gray-11);
+  }
+
+  .color-white {
+    color: var(--Atmos-White);
+  }
+
+  .color-black {
+    color: var(--Atmos-black);
+  }
+
+  .color-purple {
+    color: var(--Atmos-Purple);
+  }
+
+  .color-orange {
+    color: var(--Atmos-Orange);
+  }
+
+  .color-Secondary-Lavendar {
+    color: var(--Atmos-Secondary-Lavendar);
+  }
+
+  .color-Secondary-Orange {
+    color: var(--Atmos-Secondary-Orange);
+  }
+
+  .color-Status-Red {
+    color: var(--Atmos-Status-Red);
+  }
+
+  .color-Status-Yellow {
+    color: var(--Atmos-Status-Yellow);
+  }
+
+  .color-Status-Green {
+    color: var(--Atmos-Status-Green);
+  }
+
+  .color-Status-Cyan {
+    color: var(--Atmos-Status-Cyan);
+  }
+
+  .color-Status-Blue {
+    color: var(--Atmos-Status-Blue);
+  }
+
+  .color-Status-Warning {
+    color: var(--Atmos-Status-Warning);
+  }
+
+  .color-Alert-Red {
+    color: var(--Atmos-Alert-Red);
+  }
+
+  .color-Alert-Yellow {
+    color: var(--Atmos-Alert-Yellow);
+  }
+
+  .color-Alert-Green {
+    color: var(--Atmos-Alert-Green);
+  }
+
+  .color-Alert-Cyan {
+    color: var(--Atmos-Alert-Cyan);
+  }
+
+  .color-Alert-Blue {
+    color: var(--Atmos-Alert-Blue);
+  }
+
+  .color-gray1 {
+    color: var(--Atmos-Gray-1);
+  }
+
+  .color-gray2 {
+    color: var(--Atmos-Gray-2);
+  }
+
+  .color-gray3 {
+    color: var(--Atmos-Gray-3);
+  }
+
+  .color-gray4 {
+    color: var(--Atmos-Gray-4);
+  }
+
+  .color-gray5 {
+    color: var(--Atmos-Gray-5);
+  }
+
+  .color-gray6 {
+    color: var(--Atmos-Gray-6);
+  }
+
+  .color-gray7 {
+    color: var(--Atmos-Gray-7);
+  }
+
+  .color-gray8 {
+    color: var(--Atmos-Gray-8);
+  }
+
+  .color-gray9 {
+    color: var(--Atmos-Gray-9);
+  }
+
+  .color-gray10 {
+    color: var(--Atmos-Gray-10);
+  }
+
+  .color-gray11 {
+    color: var(--Atmos-Gray-11);
+  }
+
+  .background-gray1 {
+    background-color: var(--Atmos-Gray-1);
+  }
+
+  .background-gray2 {
+    background-color: var(--Atmos-Gray-2);
+  }
+
+  .background-gray3 {
+    background-color: var(--Atmos-Gray-3);
+  }
+
+  .background-gray4 {
+    background-color: var(--Atmos-Gray-4);
+  }
+
+  .background-gray5 {
+    background-color: var(--Atmos-Gray-5);
+  }
+
+  .background-gray6 {
+    background-color: var(--Atmos-Gray-6);
+  }
+.btn-outline-white{
+  border:1px solid var(--Atmos-White)
+}
+
+
+
+
+
+
+
+
+
+
+
+

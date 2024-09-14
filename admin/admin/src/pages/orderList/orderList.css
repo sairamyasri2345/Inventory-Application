@@ -1,0 +1,49 @@
+.btn-outline-white {
+  border: 1px solid white;
+}
+
+.Typography_Heading_H5 {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .Typography_Heading_H5 {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .Typography_Heading_H5 {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Typography_Heading_H5 {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Typography_Heading_H5 {
+    font-size: 1rem;
+  }
+}
+input[type="search"] {
+  background-color: white;
+    border: none;
+  border-radius: 15px;
+}
+
+i.bi.bi-search {
+  color: #000000 !important;
+  font-size: 16px;
+}
+.input-group{
+  background-color:white;
+  border: none;
+  border-radius: 15px;
+}
+input::placeholder{
+  color:rgb(12, 12, 12) !important;
+}

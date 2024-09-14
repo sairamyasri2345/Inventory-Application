@@ -1,0 +1,173 @@
+.nav-pills li a:hover {
+  background-color: green;
+}
+.logo{
+  width:2.3rem
+}
+/* .Atmos-logo {
+  width: 10rem;
+} */
+
+.bi-bell,
+.bi-person {
+  font-size: 22px;
+}
+
+/* @media screen and (max-width: 700px) {
+  .icon-list {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+@media screen and (max-width: 1000px) {
+  .Atmos-logo {
+    width: 6rem;
+  }
+}
+@media screen and (max-width: 830px) {
+  .Atmos-logo {
+    width: 4rem;
+  }
+}
+/* @media screen and(max-width:1500px) {
+  .icon-list {
+    gap: 2rem;
+  }
+} */
+/* @media screen and(max-width:1200px) {
+  .icon-list {
+    gap: 1rem;
+  }
+} */
+
+/* .nav-pills li a:hover {
+  background-color: green;
+} */
+
+.Atmos-logo {
+  width: 10rem;
+}
+
+.bi-bell,
+.bi-person {
+  font-size: 22px;
+}
+
+/* @media screen and (max-width: 700px) {
+  .icon-list {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+@media screen and (max-width: 1000px) {
+  .Atmos-logo {
+    width: 6rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  .Atmos-logo {
+    width: 5rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .Atmos-logo {
+    width: 4.5rem;
+  }
+}
+@media screen and (max-width: 670px) {
+  .Atmos-logo {
+    width: 4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Atmos-logo {
+    width: 3.4rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .Atmos-logo {
+    width: 3rem;
+  }
+}
+@media screen and (max-width: 470px) {
+  .Atmos-logo {
+    width: 2.5rem;
+  }
+}
+
+
+/* .Atmos-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+} */
+
+.bg-green {
+  background-color: #0e3355;
+}
+
+.icons {
+  font-size: 1.4rem;
+}
+
+.bg-dark-blue {
+  background-color: #111c43 !important;
+}
+
+.list-item-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1025px) {
+  .list-item {
+    display: flex;
+
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .icons {
+    font-size: 1rem !important;
+    padding: 4px;
+  }
+}
+.dark-mode {
+  background-color: black !important;
+  color: #ffffff !important;
+}
+.button-icon {
+  margin-left: -20px;
+}
+.bg-yellow {
+  /* background-color: rgb(200 179 115) !important; */
+  /* background-color: rgb(160 147 110) !important; */
+  /* background-color: rgb(92 91 94) !important; */
+  /* background-color: rgb(235 235 235) !important; */
+  background-color: #f2f3f4 !important;
+}
+.sidebar-card {
+  box-shadow: 0 3px 8px rgba(185, 185, 179, 0.2);
+}
+.accordion-item {
+  border: none !important;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: unset !important;
+}
+.bg-green {
+  background-color: #45926e !important;
+}
+
+/* li:hover{
+    color:white !important;
+} */

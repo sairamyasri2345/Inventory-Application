@@ -1,0 +1,41 @@
+.col-md-2{
+    width:14% !important;
+  }
+  .col-md-10{
+    width:86% !important;
+  }
+  /* .inventory-container{
+   background-color: rgb(138, 146, 118);
+  } */
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff !important;
+  }
+  
+  
+  .expanded {
+    width: calc(100% - 60px) !important;
+  }
+  
+  .navbar-section {
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar {
+    transition: all 0.3s ease;
+  }
+  .icons-only {
+    width: 60px !important;
+  }
+  .icons-only .list-item-text {
+    display: none !important;
+  }
+  .inventory-container{
+    background-color: rgb(228, 238, 247);
+
+  }
+  .dark-mode.inventory-container{
+    background-color: black !important;
+  }
+
+  

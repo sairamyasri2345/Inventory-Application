@@ -1,0 +1,33 @@
+/* @media (max-width: 768px) {
+    .d-flex {
+      flex-direction: column !important;
+    }
+  
+    .d-flex .justify-content-between {
+      flex-direction: column !important;
+    }
+  
+    .d-flex .justify-content-end {
+      justify-content: center !important;
+    }
+  
+    .form-control {
+      width: 100% !important;
+    }
+  } */
+  .container-fluid {
+    padding: 0 12px;
+    margin:0;
+    /* background-color: rgb(213, 227, 233); */
+  }
+  
+  .card {
+    margin-top: 15px;
+  }
+  .grid, .bi-cart4, .bi-cart-x{
+    font-size:35px;
+  }
+  .bg-violet{
+  background-color: rgb(120, 14, 241) !important;
+  }
+  
