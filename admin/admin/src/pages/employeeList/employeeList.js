@@ -9,6 +9,8 @@ const EmployeeList = ({ darkMode }) => {
     phoneNumber: "",
     designation: "",
     department: "",
+    email:"",
+    password:""
   });
  
   const [employeeList, setEmployeeList] = useState([]);
@@ -27,10 +29,14 @@ const EmployeeList = ({ darkMode }) => {
     else if (employee.phoneNumber.length !== 10) newErrors.phoneNumber = "Phone number must be 10 digits.";
     if (!employee.designation) newErrors.designation = "Designation is required.";
     if (!employee.department) newErrors.department = "Department is required.";
- 
+    if (!employee.email) newErrors.email = "Email is required.";
+    if (!employee.password) newErrors.password = "Password is required."; 
+  
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
+  
+  
  
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -78,6 +84,8 @@ const EmployeeList = ({ darkMode }) => {
     setEmployee({
       name: "",
       employeeId: "",
+      email:"",
+      password:"",
       phoneNumber: "",
       designation: "",
       department: "",
@@ -119,9 +127,12 @@ const EmployeeList = ({ darkMode }) => {
                     <tr>
                       <th>Name</th>
                       <th>ID</th>
+                      <th>Email</th>
+                      <th>Password</th>
                       <th>Phone</th>
                       <th>Designation</th>
                       <th>Department</th>
+                      
                     </tr>
                   </thead>
                   <tbody>
@@ -130,9 +141,12 @@ const EmployeeList = ({ darkMode }) => {
                         <tr key={emp.employeeId || index}>
                           <td>{emp.name}</td>
                           <td>{emp.employeeId}</td>
+                          <td>{emp.email}</td>
+                          <td>{emp.password}</td>
                           <td>{emp.phoneNumber}</td>
                           <td>{emp.designation}</td>
                           <td>{emp.department}</td>
+                       
                         </tr>
                       ))
                     ) : (

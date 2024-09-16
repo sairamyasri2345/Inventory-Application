@@ -14,7 +14,7 @@ const Order = ({ filterText, darkMode}) => {
     setLoading(true);
     try {
       const response = await axios.get(
-        "http://localhost:3003/appliedProducts"
+        "https://inventory-application-1.onrender.com/appliedProducts"
       );
       if (response.status === 200) {
         console.log("Fetched products:", response.data);
@@ -41,7 +41,7 @@ const Order = ({ filterText, darkMode}) => {
     );
   
     try {
-      const response = await axios.put(`http://localhost:3003/appliedProducts/${productId}`, { status: newStatus });
+      const response = await axios.put(`https://inventory-application-1.onrender.com/appliedProducts/${productId}`, { status: newStatus });
       if (response.status === 200) {
         console.log('Status updated successfully:', response.data);
         fetchProducts();

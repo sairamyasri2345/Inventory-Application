@@ -36,6 +36,30 @@ const EmployeeModal = ({ employee, handleInputChange, handleSave, handleClose, e
               {errors.employeeId && <small className="text-danger">{errors.employeeId}</small>}
             </div>
             <div className="form-group">
+  <label>Email</label>
+  <input
+    type="email"
+    name="email"
+    value={employee.email}
+    onChange={handleInputChange}
+    className="form-control"
+  />
+  {errors.email && <small className="text-danger">{errors.email}</small>}
+</div>
+<div className="form-group">
+  <label>Password</label>
+  <input
+    type="password"
+    name="password"
+    value={employee.password}
+    onChange={handleInputChange}
+    className="form-control"
+  />
+  {errors.password && <small className="text-danger">{errors.password}</small>}
+</div>
+
+
+            <div className="form-group">
               <label>Phone Number</label>
               <input
                 type="text"

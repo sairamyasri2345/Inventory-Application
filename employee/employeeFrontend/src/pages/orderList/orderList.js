@@ -18,7 +18,7 @@ const Order = ({ filterText, onFilterChange }) => {
           throw new Error('Employee ID not found in localStorage');
         }
 
-        const response = await axios.get(`http://localhost:3003/appliedProducts?employeeId=${employeeId}`, {
+        const response = await axios.get(`https://inventory-application-1.onrender.com/appliedProducts?employeeId=${employeeId}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

@@ -54,7 +54,7 @@ const EmpLogin = () => {
     if (!validateForm()) {
       return;
     }
-    fetch("http://localhost:3003/empLogin", {
+    fetch("https://inventory-application-1.onrender.com/empLogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const EmpLogin = () => {
           window.localStorage.setItem("loggedIn", true);
           console.log('Employee ID stored:', data.data.employeeId);
 
-          fetch("http://localhost:3003/layout", {
+          fetch("https://inventory-application-1.onrender.com/layout", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

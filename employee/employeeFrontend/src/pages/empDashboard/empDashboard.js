@@ -21,7 +21,7 @@ const EmployeeDashboard = ({ filterText,userData }) => {
   useEffect(() => {
     const token = window.localStorage.getItem('token');
     if (token) {
-      fetch("http://localhost:3003/layout", {
+      fetch("https://inventory-application-1.onrender.com/layout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const EmployeeDashboard = ({ filterText,userData }) => {
   useEffect(() => {
     const fetchAppliedProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:3003/appliedProducts/${employeeId}`);
+        const response = await axios.get(`https://inventory-application-1.onrender.com/appliedProducts/${employeeId}`);
 
         if (response.status === 200) {
           setAppliedProducts(response.data);
@@ -102,10 +102,10 @@ const EmployeeDashboard = ({ filterText,userData }) => {
     try {
       let response;
       if (editMode) {
-        response = await axios.put(`http://localhost:3003/updateProduct/${currentProduct._id}`, formData);
+        response = await axios.put(`https://inventory-application-1.onrender.com/updateProduct/${currentProduct._id}`, formData);
         setAppliedProducts(appliedProducts.map(product => product._id === currentProduct._id ? response.data : product));
       } else {
-        response = await axios.post('http://localhost:3003/applyProduct', formData);
+        response = await axios.post('https://inventory-application-1.onrender.com/applyProduct', formData);
         setAppliedProducts([...appliedProducts, response.data]);
       }
       handleClose();
@@ -135,7 +135,7 @@ const EmployeeDashboard = ({ filterText,userData }) => {
     }
   
     try {
-      await axios.delete(`http://localhost:3003/deleteProduct/${id}`);
+      await axios.delete(`https://inventory-application-1.onrender.com/deleteProduct/${id}`);
       setAppliedProducts(appliedProducts.filter(product => product._id !== id));
       setTimeError(''); // Clear error if applicable
     } catch (error) {
