@@ -1,8 +1,14 @@
-import React from 'react';
-import './empModal.css';
- 
-const EmployeeModal = ({ employee, handleInputChange, handleSave, handleClose, errors }) => (
-  <div className="modal" style={{ display: 'block' }}>
+import React from "react";
+import "./empModal.css";
+
+const EmployeeModal = ({
+  employee,
+  handleInputChange,
+  handleSave,
+  handleClose,
+  errors,
+}) => (
+  <div className="modal" style={{ display: "block" }}>
     <div className="modal-dialog">
       <div className="modal-content">
         <div className="modal-header">
@@ -13,6 +19,8 @@ const EmployeeModal = ({ employee, handleInputChange, handleSave, handleClose, e
         </div>
         <div className="modal-body">
           <form>
+           
+
             <div className="form-group">
               <label>Name</label>
               <input
@@ -22,7 +30,9 @@ const EmployeeModal = ({ employee, handleInputChange, handleSave, handleClose, e
                 onChange={handleInputChange}
                 className="form-control"
               />
-              {errors.name && <small className="text-danger">{errors.name}</small>}
+              {errors.name && (
+                <small className="text-danger">{errors.name}</small>
+              )}
             </div>
             <div className="form-group">
               <label>Employee ID</label>
@@ -33,31 +43,46 @@ const EmployeeModal = ({ employee, handleInputChange, handleSave, handleClose, e
                 onChange={handleInputChange}
                 className="form-control"
               />
-              {errors.employeeId && <small className="text-danger">{errors.employeeId}</small>}
+               {errors.form && (
+              <div className="alert alert-danger" role="alert">
+                {errors.form}
+              </div>
+            )}
+              {errors.employeeId && (
+                <small className="text-danger">{errors.employeeId}</small>
+              )}
             </div>
             <div className="form-group">
-  <label>Email</label>
-  <input
-    type="email"
-    name="email"
-    value={employee.email}
-    onChange={handleInputChange}
-    className="form-control"
-  />
-  {errors.email && <small className="text-danger">{errors.email}</small>}
-</div>
-<div className="form-group">
-  <label>Password</label>
-  <input
-    type="password"
-    name="password"
-    value={employee.password}
-    onChange={handleInputChange}
-    className="form-control"
-  />
-  {errors.password && <small className="text-danger">{errors.password}</small>}
-</div>
-
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                value={employee.email}
+                onChange={handleInputChange}
+                className="form-control"
+              />
+              {errors.email && (
+                <small className="text-danger">{errors.email}</small>
+              )}
+               {errors.form && (
+              <div className="alert alert-danger" role="alert">
+                {errors.form}
+              </div>
+            )}
+            </div>
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                name="password"
+                value={employee.password}
+                onChange={handleInputChange}
+                className="form-control"
+              />
+              {errors.password && (
+                <small className="text-danger">{errors.password}</small>
+              )}
+            </div>
 
             <div className="form-group">
               <label>Phone Number</label>
@@ -68,7 +93,9 @@ const EmployeeModal = ({ employee, handleInputChange, handleSave, handleClose, e
                 onChange={handleInputChange}
                 className="form-control"
               />
-              {errors.phoneNumber && <small className="text-danger">{errors.phoneNumber}</small>}
+              {errors.phoneNumber && (
+                <small className="text-danger">{errors.phoneNumber}</small>
+              )}
             </div>
             <div className="form-group">
               <label>Designation</label>
@@ -79,7 +106,9 @@ const EmployeeModal = ({ employee, handleInputChange, handleSave, handleClose, e
                 onChange={handleInputChange}
                 className="form-control"
               />
-              {errors.designation && <small className="text-danger">{errors.designation}</small>}
+              {errors.designation && (
+                <small className="text-danger">{errors.designation}</small>
+              )}
             </div>
             <div className="form-group">
               <label>Department</label>
@@ -90,22 +119,31 @@ const EmployeeModal = ({ employee, handleInputChange, handleSave, handleClose, e
                 onChange={handleInputChange}
                 className="form-control"
               />
-              {errors.department && <small className="text-danger">{errors.department}</small>}
+              {errors.department && (
+                <small className="text-danger">{errors.department}</small>
+              )}
             </div>
-           <div className='d-flex justify-content-end gap-2'>
-       
-            <button type="button" className="btn btn-secondary" onClick={handleClose}>
-              Cancel
-            </button>
-            <button type="button" className="btn btn-success" onClick={handleSave}>
-              Save
-            </button>
-           </div>
+            <div className="d-flex justify-content-end gap-2">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={handleClose}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                className="btn btn-success"
+                onClick={handleSave}
+              >
+                Save
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </div>
   </div>
 );
- 
+
 export default EmployeeModal;

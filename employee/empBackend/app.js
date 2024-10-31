@@ -213,7 +213,7 @@ app.put("/updateProduct/:id", canEditOrDelete, async (req, res) => {
     res.status(500).json({ status: "error", error: error.message });
   }
 });
-// app.put('/appliedProducts/:id', async (req, res) => {
+
 //   try {
 //     const productId = req.params.id;
 //     const newStatus = req.body.status;

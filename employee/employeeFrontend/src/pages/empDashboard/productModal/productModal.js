@@ -76,7 +76,7 @@ const EmpProduct = ({
     const formData = {
       productName,
       employeeId,
-      employeeName: userData.uname,
+      employeeName: userData.employeeName,
       quantity: parsedQuantity,
       startDate,
     };
@@ -99,7 +99,7 @@ const EmpProduct = ({
               <label>Employee Name</label>
               <input
                 type="text"
-                value={userData?.uname || ""}
+                value={userData?.employeeName || ""}
                 readOnly
                 placeholder="Employee Name"
               />

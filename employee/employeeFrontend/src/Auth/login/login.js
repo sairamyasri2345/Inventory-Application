@@ -49,45 +49,39 @@ const EmpLogin = () => {
     return valid;
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!validateForm()) {
-      return;
-    }
-    fetch("https://inventory-application-1.onrender.com/empLogin", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.status === "ok") {
-          window.localStorage.setItem("token", data.data.token);
-          window.localStorage.setItem('employeeId', data.data.employeeId);
-          window.localStorage.setItem("loggedIn", true);
-          console.log('Employee ID stored:', data.data.employeeId);
+    if (!validateForm()) return;
 
-          fetch("https://inventory-application-1.onrender.com/layout", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ token: data.data.token }),
-          })
-            .then((res) => res.json())
-            .then((userData) => {
-              if (userData.status === "ok") {
-                window.localStorage.setItem("userData", JSON.stringify(userData.data));
-                navigate("/layout/dashboard");
-              }
-            });
-        } else {
-          alert("Login error");
-        }
+    try {
+      const response = await fetch("http://localhost:3001/getEmployeeDetails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
       });
+      const data = await response.json();
+
+      if (data.status === 'ok') {
+        // Check if the entered password matches the one stored in the admin database
+        if (data.employee.password === password) {
+          // Store necessary employee data in local storage
+          window.localStorage.setItem('employeeId', data.employee.employeeId);
+          window.localStorage.setItem('email', data.employee.email);
+           window.localStorage.setItem('token', data.token);
+          // Redirect to dashboard
+          navigate("/layout/dashboard");
+        } else {
+          alert("Incorrect password. Please try again.");
+        }
+      } else {
+        alert("Employee not found. Please check your email.");
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+      alert("An error occurred while logging in. Please try again.");
+    }
   };
 
   return (
